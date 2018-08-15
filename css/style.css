@@ -1,0 +1,11 @@
+body {
+  background-color: #849d8f;
+}
+
+.card-item-img img {
+  border-radius: 50%;
+}
+
+.product-img img {
+  border-radius: 50%;
+}
