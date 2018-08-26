@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1200px;
 
   font-family: "Roboto","Tahoma",sans-serif;
   font-size: 16px;
@@ -121,6 +122,10 @@ a {
 .search-link:hover,
 .search-link:focus {
   
+}
+.basket-link-full {
+  color: #323232;
+  background-color: #f7f6f3;
 }
 
 .form-login a {
