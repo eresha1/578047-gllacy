@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="page-wrapper">
+    <div  class="container">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-logo" href="index.html">
@@ -20,7 +24,7 @@
       <ul class="site-navigation">
         <li class="site-navigation-item site-navigation-item-current"><a href="#">Каталог</a>
           <ul class="catalog-list">
-            <li><a href="#">Новинки</a></li>
+            <li><a class="catalog-link-new" href="#">Новинки</a></li>
             <li><a>Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый лед</a></li>
@@ -36,7 +40,7 @@
       </ul>
       <div class="user-block">
         <div class="search-wrapper">
-          <a class="search-btn" href="#">
+          <a class="search-button" href="#">
             <span class="visually-hidden">поиск</span>
           </a>
           <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
@@ -51,12 +55,12 @@
           </ul>
           <form class="form-login" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden">Электронная почта
-            <input type="text" name="email" placeholder="Электронная почта" required>
+            <input class="input-text" type="text" name="email" placeholder="Электронная почта" required>
             </label>
             <label class="visually-hidden">Пароль 
-            <input type="password" name="password" placeholder="Пароль" required>
+            <input class="input-text" type="password" name="password" placeholder="Пароль" required>
             </label>
-            <button class="btn btn-login" type="submit">Войти</button>
+            <button class="button button-login" type="submit">Войти</button>
             <a href="#">Забыли пароль?</a>
             <a href="#">Новая регистрация</a>
           </form>
@@ -100,7 +104,7 @@
                 </tr>
               </tbody>
             </table>
-            <a class="btn btn-basket-product" href="#">Оформить заказ</a>
+            <a class="button button-basket-product" href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
@@ -110,24 +114,26 @@
       <a href="tel:88124502525" class="contact-number">8 812 450-25-25</a>
     </div>
   </header>
-  <main class="container">
+  <main>
     <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Каталог</a></li>
+      <li><a class="link-all" href="index.html">Главная</a></li>
+      <li><a class="link-all" href="#">Каталог</a></li>
       <li><a>Сливочное</a></li>
     </ul>
     <h1 class="page-title">Сливочное мороженое </h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class=filter-item filter-item-sort">
+        <fieldset class="filter-item filter-item-sort">
     <legend>Сортировка:</legend>
+    <div class="sort-wrapper">
     <select name="sort">
   <option value="popular">по популярности</option>
   <option value="cheap">сначала недорогие</option>
   <option value="expensive">сначала дорогие</option>
   <option value="fat">по жирности</option>
 </select>
+</div>
 </fieldset>
 <fieldset class="filter-item filter-item-price">
   <legend>Цена:</legend>
@@ -147,9 +153,9 @@
     <button class="range-toggle range-toggle-max" type="button"></button>
   </div>
 </fieldset>
-<fieldset filter-item filter-item-fatness>
+<fieldset class="filter-item filter-item-fatness">
   <legend>Жирность:</legend>
-  <ul>
+  <ul class="filter-list">
     <li>
       <label>
       <input class="visually-hidden" type="radio" name="fatness" value="0%">0%
@@ -167,13 +173,14 @@
     </li>
      <li>
       <label>
-      <input class="visually-hidden" type="radio" name="fatness" value=more30%">выше 30%
+      <input class="visually-hidden" type="radio" name="fatness" value="more30%">выше 30%
     </label>
     </li>
   </ul>
 </fieldset>
 <fieldset class="filter-item filter-item-filler">
-  <ul>
+   <legend>Наполнители:</legend>
+  <ul class="filter-list">
     <li>
       <label>
         <input class="visually-hidden" type="checkbox" name="chocolate" checked>шоколадные
@@ -201,7 +208,7 @@
     </li>
   </ul>
 </fieldset>
-<button class="btn btn-filters" type="submit">Применить</button>
+<button class=" button-filters" type="submit">Применить</button>
       </form>
     </section>
     <section>
@@ -215,10 +222,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="link-all" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -229,10 +236,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="link-all" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -243,10 +250,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="link-all" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -257,10 +264,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="link-all" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -271,10 +278,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с брусничным джемом</a>
+            <a class="link-all" href="#">Сливочное с брусничным джемом</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -285,10 +292,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-черничное с цельными ягодами черники </a>
+            <a class="link-all" href="#">Сливочно-черничное с цельными ягодами черники </a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -299,10 +306,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+            <a class="link-all" href="#">Сливочно-лимонное с карамельной присыпкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -313,10 +320,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с шоколадной стружкой</a>
+            <a class="link-all" href="#">Сливочное с шоколадной стружкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -327,10 +334,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-ванильное с кусочками шоколада </a>
+            <a class="link-all" href="#">Сливочно-ванильное с кусочками шоколада </a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -341,10 +348,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочноe с ментоловым сиропом</a>
+            <a class="link-all" href="#">Сливочноe с ментоловым сиропом</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -355,10 +362,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с кусочками черного шоколада</a>
+            <a class="link-all" href="#">Сливочное с кусочками черного шоколада</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-page">
@@ -369,16 +376,16 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с мятным сиропом</a>
+            <a class="link-all" href="#">Сливочное с мятным сиропом</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
       </ul>
       <div class="pagination">
         <ul class="pagination-list">
-          <li><a class="pagination-arrow pagination-arrow-current">
+          <li><a class="pagination-arrow-start">
             <span class="visually-hidden">назад</span>&lt;</a>
           </li>
           <li><a class="pagination-link pagination-link-current">1</a></li>
@@ -386,7 +393,7 @@
           <li><a href="#" class="pagination-link">3</a></li>
           <li><a href="#" class="pagination-link">4</a></li>
           <li><a href="#" class="pagination-link">5</a></li>
-          <li><a class="pagination-arrow" href="#">
+          <li><a class="pagination-arrow-end" href="#">
             <span class="visually-hidden">вперед</span>&gt;</a></li>
           </ul>
         </div>
@@ -421,10 +428,10 @@
       </li>
     </ul>
     <ul class="useful-links">
-      <li><a href="#"><b>Для поставщиков</b></a></li>
-      <li><a href="#">Наши документы</a></li>
-      <li><a href="#">О производстве </a></li>
-      <li><a href="#">Экологические стандарты</a></li>
+      <li><a class="link-all useful-link-important" href="#">Для поставщиков</a></li>
+      <li><a class="link-all" href="#">Наши документы</a></li>
+      <li><a class="link-all" href="#">О производстве </a></li>
+      <li><a class="link-all" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="footer-copyright">
       <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -434,10 +441,12 @@
       </svg>
     </a>
     <p class="footer-copyright-text">Сделано в  
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
+      <a class="link-all" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
       © 2017
     </p>
   </div>
 </footer>
+</div>
+</div>
   </body>
   </html>

@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="page-wrapper page-wrapper-bg1">
+    <div class="container">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-logo">
@@ -21,7 +25,7 @@
         <li class="site-navigation-item">
           <a href="#">Каталог</a>
           <ul class="catalog-list">
-            <li><a href="#">Новинки</a></li>
+            <li><a class="catalog-link-new" href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый лед</a></li>
@@ -36,8 +40,8 @@
         </li>
       </ul>
       <div class="user-block">
-        <div class="search-wrapper">
-          <a class="search-btn" href="#">
+        <div class="user-wrapper search-wrapper">
+          <a class="user-button search-link" href="#">
             <span class="visually-hidden">поиск</span>
           </a>
           <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
@@ -46,24 +50,23 @@
             </label>
           </form>
         </div>
-        <div class="user-wrapper">
-          <ul class="user-navigation">
-            <li><a href="#">Вход</a></li>
-          </ul>
+        <div class="user-wrapper login-wrapper">
+          <a class="user-button user-link" href="#">Вход</a>
+          
           <form class="form-login" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden">Электронная почта
-            <input type="text" name="email" placeholder="Электронная почта" required>
+            <input class="input-text" type="text" name="email" placeholder="Электронная почта" required>
             </label>
             <label class="visually-hidden">Пароль 
-            <input type="password" name="password" placeholder="Пароль" required>
+            <input class="input-text" type="password" name="password" placeholder="Пароль" required>
             </label>
-            <button class="btn btn-login" type="submit">Войти</button>
+            <button class="button button-login" type="submit">Войти</button>
             <a href="#">Забыли пароль?</a>
             <a href="#">Новая регистрация</a>
           </form>
         </div>
-        <div class="basket-wrapper">
-          <a class="basket-link" href="#">Пусто</a>
+        <div class="user-wrapper basket-wrapper">
+          <a class="user-button basket-link" href="#">Пусто</a>
         </div>
       </div>
     </nav>
@@ -77,28 +80,28 @@
     <div class="slider">
       <div class="slide">
         <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-        <a class="btn slide-btn" href="#">Давайте оба!</a>
+        <a class="button slide-button" href="#">Давайте оба!</a>
       </div>
       <div class="slide">
         <h2>Шоколадный пломбир и лимонный сорбет</h2>
-        <a class="btn slide-btn" href="#">Давайте оба!</a>
+        <a class="button slide-button" href="#">Давайте оба!</a>
       </div>
       <div class="slide">
         <h2>Пломбир с помадкой и клубничный щербет</h2>
-        <a class="btn slide-btn" href="#">Давайте оба!</a>
+        <a class="button slide-button" href="#">Давайте оба!</a>
       </div>
       <ul class="slider-controls">
-        <li><button class="btn-slider btn-slider-current" type="button">
+        <li><button class="button-slider button-slider-current" type="button">
           <span class="visually-hidden">1</span>
         </button>
       </li>
       <li>
-        <button class="btn-slider" type="button">
+        <button class="button-slider" type="button">
           <span class="visually-hidden">2</span>
         </button>
       </li>
       <li>
-        <button class="btn-slider" type="button">
+        <button class="button-slider" type="button">
           <span class="visually-hidden">3</span>
         </button>
       </li>
@@ -107,15 +110,15 @@
     <section class="promotion">
       <h2 class="visually-hidden">Акции магазина</h2>
       <ul class="promotion-list">
-        <li class="promotion-item">
+        <li class="promotion-item promotion-item-raspberry">
           <b>Малинка даром!</b>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn promotion-btn" href="#">Хочу варенье!</a>
+          <a class="button promotion-button" href="#">Хочу варенье!</a>
         </li>
-        <li class="promotion-item">
+        <li class="promotion-item promotion-item-chocolate">
           <b>Шоколадки даром!</b>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="btn promotion-btn" href="#">Хочу шоколадки! </a>
+          <a class="button promotion-button" href="#">Хочу шоколадки! </a>
         </li>
       </ul>
     </section>
@@ -130,10 +133,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="link-all" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-hit">
@@ -144,10 +147,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="link-all" href="#">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-hit">
@@ -158,10 +161,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="link-all" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
         <li class="card-item card-item-hit">
@@ -172,10 +175,10 @@
             <span>/кг</span>
           </p>
           <h3 class="card-item-title">
-            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="link-all" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           </h3>
           <div class="card-wrapper"> 
-            <a class="btn card-item-btn" href="#">Быстрый просмотр</a>
+            <a class="button card-item-button" href="#">Быстрый просмотр</a>
           </div>
         </li>
       </ul>
@@ -204,14 +207,16 @@
         <a class="blog-article-title" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscribe">
+        <div class="subscribe-container">
         <h2 class="visually-hidden" >Форма подписки</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="form-subscribe" action="https://echo.htmlacademy.ru" method="post">
           <label class="input-email">
-            <input class="text-subscribe" type="text" placeholder="Электронная почта" required>
+            <input class="input-text text-subscribe" type="text" placeholder="Электронная почта" required>
           </label>
-          <button class="btn btn-subscribe" type="submit">Отправить</button>
+          <button class="button button-subscribe" type="submit">Отправить</button>
         </form>
+      </div>
       </section>
     </div>
     <section class="location">
@@ -225,7 +230,7 @@
           <b><a href="tel:88124502525">8 812 450-25-25</a></b> 
           (с 10 до 20 ежедневно)
         </p>
-        <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+        <a class="button button-feedback" href="#">Форма обратной связи</a>
       </div>
     </section>
   </main>
@@ -257,10 +262,10 @@
       </li>
     </ul>
     <ul class="useful-links">
-      <li><a href="#"><b>Для поставщиков</b></a></li>
-      <li><a href="#">Наши документы</a></li>
-      <li><a href="#">О производстве </a></li>
-      <li><a href="#">Экологические стандарты</a></li>
+      <li><a class="link-all useful-link-important" href="#">Для поставщиков</a></li>
+      <li><a class="link-all" href="#">Наши документы</a></li>
+      <li><a class="link-all" href="#">О производстве </a></li>
+      <li><a class="link-all" href="#">Экологические стандарты</a></li>
     </ul>
     <div class="footer-copyright">
       <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -270,7 +275,7 @@
       </svg>
     </a>
     <p class="footer-copyright-text">Сделано в  
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
+      <a class="link-all" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 
       © 2017
     </p>
   </div>
@@ -285,12 +290,13 @@
     <input class="input-text" id="feedback-email" type="text" placeholder="Ваша почта для ответа?">
     <label class="visually-hidden" for="feedback-write">Напишите что-нибудь...</label>
     <textarea class="input-text" id="feedback-write" placeholder="Напишите что-нибудь..." cols="30" rows="10"></textarea>
-    <button class="btn btn-send" type="submit">Отправить</button>
+    <button class="button button-send" type="submit">Отправить</button>
  </form>
  <button class="modal-close" type="button">
   <span class="visually-hidden">закрыть</span>
 </button>
 </section>
-
+</div>
+</div>
 </body>
 </html>
