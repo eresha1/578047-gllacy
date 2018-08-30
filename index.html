@@ -23,9 +23,9 @@
       </a>
       <ul class="site-navigation">
         <li class="site-navigation-item">
-          <a href="#">Каталог</a>
-          <ul class="catalog-list">
-            <li><a class="catalog-link-new" href="#">Новинки</a></li>
+          <a class="site-navigation-link catalog-sub-menu" href="#">Каталог</a>
+          <ul class="sub-menu">
+            <li><a class="sub-menu-new" href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый лед</a></li>
@@ -33,12 +33,13 @@
           </ul>
         </li>
         <li class="site-navigation-item">
-          <a href="#">Доставка и оплата</a>
+          <a class="site-navigation-link" href="#">Доставка и оплата</a>
         </li>
         <li class="site-navigation-item">
-          <a href="#">О Компании</a>
+          <a class="site-navigation-link" href="#">О Компании</a>
         </li>
       </ul>
+    </nav>
       <div class="user-block">
         <div class="user-wrapper search-wrapper">
           <a class="user-button search-link" href="#">
@@ -70,7 +71,6 @@
           <a class="user-button basket-link" href="#">Пусто</a>
         </div>
       </div>
-    </nav>
     <div class="main-header-contact">
       <p>С 10 до 20, ежедневно</p>
       <a href="tel:88124502525" class="contact-number">8 812 450-25-25</a>
@@ -79,7 +79,7 @@
   <main>
     <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
     <div class="slider">
-      <div class="slide">
+      <div class="slide slide-current">
         <h2>Крем-брюле и пломбир с малиновым джемом</h2>
         <a class="button slide-button" href="#">Давайте оба!</a>
       </div>
@@ -124,7 +124,7 @@
       </ul>
     </section>
     <section class="offers">
-      <h2>Хиты продаж</h2>
+      <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="card-list">
         <li class="card-item card-item-hit">
           <div class="card-item-img">
@@ -220,11 +220,12 @@
       </div>
       </section>
     </div>
+    </div>
     <section class="location">
       <h2 class="visually-hidden">Как к нам добраться</h2>
       <img src="img/map.png" width="1200" height="430" alt="Главный офис и офлайн магазин находятся по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <div class="location-contacts">
-        <p> Адрес главного офиса и офлайн магазина:
+        <p> Адрес главного офиса и&nbsp;офлайн магазина:
           <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
         </p>
         <p>Для заказов по телефону: 
@@ -235,7 +236,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="main-footer container">
     <ul class="social-list">
       <li class="social-item">
         <a href="#" class="social-link">
@@ -297,7 +298,7 @@
   <span class="visually-hidden">закрыть</span>
 </button>
 </section>
-</div>
+
 </div>
 </body>
 </html>
