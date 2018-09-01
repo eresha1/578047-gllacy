@@ -70,15 +70,15 @@ img {
 }
 
 .container {
-  width: 1150px;
+  width: 1146px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 27px;
 }
 
 .main-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 
   padding-top: 9px;
   
@@ -89,17 +89,20 @@ img {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  width: 560px;
+  width: 800px;
 }
 
 .main-logo {
   width: 154px;
+  margin-right: 10px;
 }
 
 .site-navigation {
-  width: 400px;
-  display: flex;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+        padding-top: 14px;
 }
 
 
@@ -107,7 +110,7 @@ img {
 .sub-menu,
 .user-navigation {
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -121,6 +124,7 @@ img {
     content: "";
     display: block;
     height: 1px; 
+        margin-top: -1px;
      
     background-color: rgba(255,255,255,0.2);
 }
@@ -135,7 +139,7 @@ img {
 
 .site-navigation-item > a {
    display: block;
-  padding: 8px 14px; 
+  padding: 7px 14px 7px; 
   font-weight: 700;
   color: #ffffff;
   border-radius: 20px;
@@ -227,15 +231,24 @@ img {
 }
 
 .user-block {
+
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  width: 270px;
+   justify-content: flex-end;
+  width: 290px;
   margin-left: auto;
+  padding-top: 14px;
+}
+
+.user-wrapper {
+  margin-left: 11px;
 }
 
 .user-button {
-  padding: 10px;
+   position: relative;
+  display: block;
+
+
   font-size: 14px;
   line-height: 16px; 
   font-weight: 500; 
@@ -245,16 +258,35 @@ img {
   background-color: rgba(255,255,255,0.2);
 }
 
+
+
 .user-button:hover,
 .user-button:focus {
   color: #323232;
   background-color: #f8f7f4;
 }
 
-.search-link {
-  position: relative;
-  display: block;
+.user-button:hover path,
+.user-button:hover circle,
+.user-button:focus path,
+.user-button:focus circle {
+  fill: #000000;
+  }
+
+.search-link { 
+   width: 32px;
+  height: 32px;
 }
+
+.search-link svg {
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -8px;
+}
+
+
 
 .form-search {
   position: absolute; 
@@ -266,14 +298,19 @@ img {
  }
 
 
-.search-link:hover,
-.search-link:focus {
-  
+.user-link,
+.basket-link  { 
+  padding: 8px 16px 8px 44px; 
 }
 
-.user-link {
-  display: block;
+.user-link svg, 
+.basket-link svg { 
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 15px;
 }
+
 
 .user-navigation>li {
   position: relative;
@@ -291,6 +328,8 @@ img {
 .basket-product {
   display: none;
 }
+
+
 
 .basket-link-full {
   color: #323232;
@@ -357,11 +396,10 @@ img {
 
 .button {
   display: inline-block;
- text-align: center;
- vertical-align: top;
- 
-  font-weight: 700; 
+
+   font-weight: 700; 
   color: #ffffff;
+   text-align: center;
   text-shadow: 0 2px 5px rgba(160,32,11,0.76);
   vertical-align: middle;
 
@@ -399,17 +437,23 @@ img {
 
 .main-header-contact {
   position: absolute;
-  top: 70px;
-  right: 170px;
+
+     max-width: 180px;
+  top: 73px;
+  right: 27px;
+  text-align: right;
 }
 
 .main-header-contact p {
+      margin-top: 0;
+    margin-bottom: 3px;
   font-size: 14px;
   line-height: 16px; 
   font-weight: 700;  
 }
 
 .contact-number {
+
   font-size: 22px;
   line-height: 24px; 
   font-weight: 700;  
@@ -422,8 +466,8 @@ img {
 
 .slide {
   display: none;
-  margin-top: 310px; 
-  margin-bottom: 40px
+  margin-top: 315px; 
+  margin-bottom: 41px;
 }
 
 .slide-current {
@@ -433,7 +477,7 @@ img {
 
 .slide h2 {
   width: 680px;
-  margin: 0 auto 35px;
+  margin: 0 auto 30px;
   font-size: 60px;
   line-height: 60px; 
   font-weight: 700; 
@@ -442,10 +486,9 @@ img {
 }
 
 .slide-button {
-  padding: 10px 40px;
+  padding: 9px 41px 11px;
   font-size: 32px;
   line-height: 44px;  
-  text-align: center;
 }
 
 .slider-controls,
@@ -474,8 +517,8 @@ img {
   display: flex;
   flex-direction: column;
   width: 560px;
-  padding: 15px 20px 15px 20px;
-  margin-bottom: 40px;
+  padding: 16px 22px 23px 20px;
+    margin-bottom: 40px;
   border-radius: 15px;
   box-sizing: border-box;
 }
@@ -504,14 +547,14 @@ img {
 
 .promotion-item p {
       margin-top: 0;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
     font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
 .promotion-button {
-  padding: 15px 22px;
+  padding: 10px 22px 12px;
   margin-left: auto; 
   font-size: 18px;
   line-height: 24px;  
@@ -529,6 +572,7 @@ img {
 .card-item {
   position: relative;
   width: 267px;
+  margin-bottom: 38px;
   text-align: center;
 }
 
@@ -536,8 +580,8 @@ img {
 
     position: absolute;
      content: "";
-     top: 10px;
-     left: 10px;
+     top: 0;
+     left: 0;
      width: 61px;
      height: 61px;
      background-image: url(../img/hit.svg);
@@ -548,7 +592,7 @@ img {
 }
 
 .card-item:not(:nth-child(4n+4)) {
-  margin-right: 27px;
+  margin-right: 26px;
 } 
 
 .card-item-img img {
@@ -565,16 +609,31 @@ img {
 .card-item-price {
   position: absolute;
   left: 0;
-      top: 130px;
+      top: 209px;
+      margin: 0;
    font-size: 45px;
   line-height: 45px;
 }
 
-.card-item-price span {
-    font-size: 30px;
-  line-height: 30px;
+.img-ruble {
+     position: relative;
+    top: 4px;
+    left: -8px;
 }
 
+
+
+.card-item-price span {
+  position: relative;
+        top: 0;
+    left: -18px;;
+    font-size: 30px;
+  line-height: 45px;
+}
+
+.card-item-img {
+  margin-bottom: 9px;
+}
 
 .card-item-title a {
   font-size: 16px;
@@ -585,6 +644,10 @@ img {
 .card-item-title {
       position: relative;
     z-index: 30;
+    margin: 0;
+        max-width: 255px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-wrapper {
@@ -604,10 +667,11 @@ img {
 
 .card-item-button {
 
-  padding: 13px 17px;
+  padding: 9px 16px;
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 22px;
+  border-radius: 20px;
 }
 
 
@@ -617,7 +681,7 @@ img {
 }
 
 .features {
-padding: 20px 27px;
+padding: 25px 20px 12px;
 margin-bottom: 40px;
   color: #323232;
   background-color: #ede1c5;
@@ -627,7 +691,7 @@ margin-bottom: 40px;
 
 .features-title {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 11px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -644,10 +708,10 @@ margin-bottom: 40px;
 
 .feature-item {
   width: 540px;
-  padding-left: 60px;
+  padding-left: 57px;
   padding-right: 5px;
-      margin-top: 12px;
-    margin-bottom: 10px;
+     margin-bottom: 11px;
+    margin-top: 11px;
 
   line-height: 22px;
   font-weight: 400;
@@ -658,12 +722,13 @@ margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 39px;
 }
 
 .blog-article,
 .subscribe {
-   width: 510px;
+   width: 560px;
+   min-height: 220px;
    border-radius: 15px;
 
   box-sizing: border-box;
@@ -671,11 +736,11 @@ margin-bottom: 40px;
 }
 
 .blog-article {
- padding: 20px 25px;
+ padding: 20px 20px;
   color: #323232;
   background-color: #ffffff;
-  background-image: url(../img/strawberry-bg.jpg);
-  background-position: 0 0;
+  background-image: url(../img/strawberry.jpg);
+  background-position: 17% 39.5%;
   background-repeat: no-repeat;
 }
 
@@ -700,24 +765,31 @@ margin-bottom: 40px;
 }
 
   .subscribe {
-     width: 560px;
-    padding: 5px; 
-    color: #5a5a5a; 
-  line-height: 22px;
-  font-weight: 400;
+ padding: 5px;
   background-image: repeating-linear-gradient(135deg, #92CDFF 8px,  #ffffff 8px, #ffffff 16px, #FE9E90 16px,  #FE9E90 24px, #ffffff 24px, #ffffff 32px, #92CDFF 32px,  #92CDFF 40px );
 }
 
  .subscribe-container {
-  padding: 18px;
+         padding: 13px 22px;
+    min-height: 87%;
+       color: #5a5a5a; 
+  line-height: 22px;
+  font-weight: 400;
     background-color: #f8f7f4;
     border-radius: 15px;
+
 } 
 
+.form-subscribe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
 
 .form-subscribe input {
     width: 367px;
-    padding: 10px 15px;
+    padding: 10px 14px 8px;
+    margin-right: 12px;
       font-size: 16px;
   line-height: 24px; 
   font-weight: 400; 
@@ -747,7 +819,7 @@ border: 1px solid rgba(178,178,178,0.52);
 }
 
 .button-subscribe {
-  padding: 13px 19px 12px;
+  padding: 10px 18px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -771,13 +843,14 @@ border: 1px solid rgba(178,178,178,0.52);
  
 .location-contacts {
   position: absolute;
-  width: 305px;
-  top: 60px;
-   right: 100px; 
+  width: 303px;
+  top: 63px;
+   right: 101px; 
  z-index: 20;
-  padding: 27px 20px;
+  padding: 30px 25px;
   color: #323232;
-  background-color: #fefefe;
+    background-color: #fefefe;
+    border-radius: 15px;
 box-sizing: border-box;
 }
 
