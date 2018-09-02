@@ -506,6 +506,21 @@ img {
   flex-wrap: wrap;
 }
 
+.toggle-slider {
+  display: block;
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+cursor: pointer;
+}
+
+.toggle-slider-current {
+  background-color: #ffffff;
+}
+
 .promotion-list {
   display: flex;
   justify-content: space-between;
@@ -707,6 +722,7 @@ margin-bottom: 40px;
 }
 
 .feature-item {
+  position: relative;
   width: 540px;
   padding-left: 57px;
   padding-right: 5px;
@@ -716,6 +732,36 @@ margin-bottom: 40px;
   line-height: 22px;
   font-weight: 400;
   box-sizing: border-box;
+}
+
+
+
+.feature-item::before {
+  position: absolute;
+  content: "";
+  width: 49px;
+  height: 49px;
+  top: -14px;
+  left: -1px;
+  
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.feature-item-cream::before {
+  background-image: url(../img/ice-cream.svg);
+}
+
+.feature-item-cow::before {
+  background-image: url(../img/cow.svg);
+}
+
+.feature-item-leaf::before {
+  background-image: url(../img/eco.svg);
+}
+
+.feature-item-thermometer::before {
+  background-image: url(../img/thermometer.svg);
 }
 
 .news-wrapper {
@@ -844,10 +890,11 @@ border: 1px solid rgba(178,178,178,0.52);
 .location-contacts {
   position: absolute;
   width: 303px;
+  min-height: 305px;
   top: 63px;
    right: 101px; 
  z-index: 20;
-  padding: 30px 25px;
+  padding: 20px 26px;
   color: #323232;
     background-color: #fefefe;
     border-radius: 15px;
@@ -858,16 +905,16 @@ box-sizing: border-box;
   content: "";
   position: absolute;
   z-index: 15;
-  background-image: url(../img/pin.svg);
+  background-image: url(../img/pin.png);
       top: 140px;
     left: 340px;
-  width: 80px;
-  height: 140px;
+  width: 218px;
+  height: 142px;
 
 }
 .location-contacts p {
-  margin-top: 0;
-  margin-bottom: 23px;
+  margin-top: 10px;
+  margin-bottom: 19px;
   width: 175px;
   font-size: 14px;
   line-height: 20px;
@@ -875,26 +922,32 @@ box-sizing: border-box;
 }
 
 
-.location-contacts b,
-.location-contacts a {
- 
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-      
-}
 
 .location-contacts b>a {
+    display: inline-block;
+      margin: 3px 0; 
   color: inherit;
+    vertical-align: middle;
+  
 }
+
 .location-contacts b {
    display: inline-block;
     width: 225px;
-    vertical-align: top;
+       font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+    vertical-align: middle;
 }
 
 .button-feedback {
-  padding: 13px 28px;
+  margin-top: 4px;
+  padding: 10px 27px;
+   font-size: 18px;
+  line-height: 24px;
+color: #fefefe;
+border-radius: 23px;
+
 }
 
 .product-img img {
@@ -905,8 +958,8 @@ box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
- padding-top: 15px;
- padding-bottom: 25px; 
+ padding-top: 18px;
+ padding-bottom: 12px; 
 }
 
 .social-list,
@@ -923,12 +976,15 @@ box-sizing: border-box;
 
 }
 
+.social-item {
+  margin-right: 12px;
+}
+
 .social-link {
   position: relative;
   display: block;
   width: 32px;
   height: 32px;
-  margin-right: 10px;
   
   border-radius: 50%;
   border: 3px solid rgba(255,255,255,0.5);
@@ -972,21 +1028,38 @@ box-sizing: border-box;
 }
 
 .useful-links li {
-   margin-left: 25px;
-   min-width: 130px;
-}
-
-.useful-links a {
-
-
+    min-width: 130px;
+    margin-bottom: 3px;
     font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-    }
+}
+
+.useful-links li:nth-child(2n+1) {
+     margin-left: 35px;
+}
+
+.useful-links li:nth-child(2n) {
+     margin-left: 12px;
+}
 
 .useful-links .useful-link-important {
+  position: relative;
   font-weight: 700;
 }
+
+.useful-link-important::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 13px;
+  top: 2px;
+  left: -23px;
+  background-image: url(../img/heart.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 
 .footer-copyright {
   width: 265px;
@@ -998,6 +1071,7 @@ box-sizing: border-box;
 
 .footer-copyright-text {
       align-self: flex-end;
+      margin-top: 1px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
