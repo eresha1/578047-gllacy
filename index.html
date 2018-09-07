@@ -236,7 +236,10 @@
     </div>
     <section class="location">
       <h2 class="visually-hidden">Как к нам добраться</h2>
-      <img src="img/map.png" width="1200" height="430" alt="Главный офис и офлайн магазин находятся по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <div class="map-interactive" id="map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3923b210b90b025c55e2f2c862efaf6ef9873e1196d6e8073b8ce5e5ed40f755&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
+    </div>
+       <img class="map-image" src="img/map-full.png" width="1200" height="640" alt="Главный офис и офлайн магазин находятся по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
       <div class="location-contacts">
         <p> Адрес главного офиса и&nbsp;офлайн-магазина:
           <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
@@ -295,22 +298,29 @@
     </p>
   </div>
 </footer>
-<!--      <section class="modal modal-feedback">
+<section class="modal modal-feedback">
   <h2 class="visually-hidden">форма обратной связи</h2>
-  <p>Мы обязательно вам ответим!</p>
+  
   <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
-    <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-    <input class="input-text" id="feedback-name" type="text" placeholder="Как вас зовут?">
-    <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
-    <input class="input-text" id="feedback-email" type="text" placeholder="Ваша почта для ответа?">
-    <label class="visually-hidden" for="feedback-write">Напишите что-нибудь...</label>
-    <textarea class="input-text" id="feedback-write" placeholder="Напишите что-нибудь..." cols="30" rows="10"></textarea>
+    <fieldset> 
+    <legend>Мы обязательно вам ответим!</legend>
+    <label class="field-text"><span class="visually-hidden">Как вас зовут?</span>
+    <input class="input-text input-text-feedback" id="feedback-name" type="text" placeholder="Как вас зовут?">
+    </label>
+    <label class="field-text"><span class="visually-hidden">Ваша почта для ответа?</span>
+    <input class="input-text input-text-feedback" id="feedback-email" type="text" placeholder="Ваша почта для ответа?">
+    </label>
+    <label class="field-text-area"><span class="visually-hidden"> Напишите что-нибудь...</span>
+    <textarea class="input-text input-text-feedback input-text-area" id="feedback-write" placeholder="Напишите что-нибудь..."></textarea>
+    </label>
+  </fieldset>
     <button class="button button-send" type="submit">Отправить</button>
  </form>
  <button class="modal-close" type="button">
   <span class="visually-hidden">закрыть</span>
 </button>
-</section>    -->
+</section>
+<div class="modal-overlay"></div>
 
 </div>
 </body>

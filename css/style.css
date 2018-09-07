@@ -377,9 +377,9 @@ img {
 
      font-size: 14px;
   line-height: 24px;  
-    font-weight: 400;
-    color: #999999;
-}
+    font-weight: 700;
+    color: #323232;
+  }
 
 
 .input-text:hover  {
@@ -637,6 +637,7 @@ img {
   font-size: 14px;
   line-height: 16px; 
   font-weight: 700;  
+      text-align: right;
 }
 
 .contact-number {
@@ -1062,17 +1063,38 @@ margin-bottom: 40px;
 .location {
   position: relative;
   height: 430px;
-  overflow: hidden;
+  overflow: hidden;  
+
 }
 
-.location img {
+.map-image {
+      position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%);
-   z-index: 5;
-  width: 1200px;
+
+   width: 1200px;
   height: 430px;
+}
+
+.map-interactive {
+  
+      position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-interactive iframe {
+  border: 0;
 }
  
 .location-contacts {
@@ -1339,9 +1361,12 @@ border-radius: 23px;
 
 
 .sort-wrapper-select {
- 
+     width: 195px;
     padding: 7px 14px 8px;
   vertical-align: top;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 }
 
 
@@ -1350,6 +1375,25 @@ border-radius: 23px;
 .sort-wrapper-select:focus {
   color: #323232; 
 }
+
+
+
+.select-container {
+  position: relative;
+}
+
+.select-container svg {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 12px;    
+  }
+
+.select-container:hover polyline,
+.select-container:focus polyline  {
+ fill: #323232;
+}
+
  /*
 
 
@@ -1687,4 +1731,114 @@ border-radius: 23px;
 .pagination-link:active:not(.pagination-link-current) {
       color: #323232;
     background-color: #ffffff;
+}
+
+/*    модальные окна */
+.modal {
+  
+}
+
+.modal-feedback { 
+  display: none;
+  position: fixed;
+  z-index: 50;
+  width: 477px;
+
+      top: 50%;
+    left: 50%;
+        transform: translate(-50%,-50%);
+  padding: 16px 24px 25px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  margin-bottom: 200px;
+
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form-feedback fieldset {
+      padding: 0;
+      margin: 0;
+    margin-bottom: 21px;
+
+  border: none;
+}
+
+.form-feedback legend {
+  margin-bottom: 19px;
+   font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.field-text {
+  display: block;
+  width: 265px;
+  margin-bottom: 20px;
+}
+
+.input-text-feedback { 
+   font-size: 16px;
+  line-height: 24px;  
+    font-weight: 700;
+    color: #323232;
+}
+
+.input-text-area {
+  min-height: 155px;
+}
+
+.button-send {
+  align-self: flex-end;
+  padding: 11px 24px;
+   font-size: 18px;
+  line-height: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 13px;
+    right: 14px;
+  border: none; 
+  background-color: transparent;
+}
+
+.modal-close::before,
+.modal-close::after {
+content: "";
+position: absolute;
+    top: 9px;
+    left: -1px;
+width: 23px;
+height: 2px;
+background-color: #231f20;
+}
+
+.modal-close::before {
+   transform: rotate(45deg);
+}
+
+.modal-close::after {
+   transform: rotate(-45deg);
+}
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+      z-index: 40;
 }
