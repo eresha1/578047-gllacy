@@ -1740,21 +1740,15 @@ border-radius: 23px;
 }
 
 /*    модальные окна */
-.modal {
-  
-}
-
-
 
 .modal-feedback { 
   display: none;
   position: fixed;
   z-index: 50;
   width: 477px;
- top: 120px;
+ top: 50%;
+ transform: translateY(-50%);
   left: 50%;
-
-  
   margin-left: -250px;
   padding: 16px 24px 25px;
   background-color: #f8f7f4;
