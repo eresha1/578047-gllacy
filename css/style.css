@@ -765,10 +765,12 @@ cursor: pointer;
 }
 
 .promotion-button {
+  align-self: flex-end;
   padding: 10px 22px 12px;
   margin-left: auto; 
   font-size: 18px;
   line-height: 24px;  
+
 }
 
 .card-list {
@@ -1205,8 +1207,7 @@ border-radius: 23px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -16px;
-  margin-left: -16px;
+  transform: translate(-50%, -50%);
 }
 
 .social-link path {
@@ -1361,12 +1362,13 @@ border-radius: 23px;
 
 
 .sort-wrapper-select {
-     width: 195px;
+     width: 160%;
     padding: 7px 14px 8px;
   vertical-align: top;
-      -webkit-appearance: none;
+  border: none;
+   /*   -webkit-appearance: none;
       -moz-appearance: none;
-      appearance: none;
+      appearance: none;*/
 }
 
 
@@ -1380,6 +1382,9 @@ border-radius: 23px;
 
 .select-container {
   position: relative;
+  overflow-x: hidden;
+  width: 195px;
+  border-radius: 50px;
 }
 
 .select-container svg {
@@ -1436,11 +1441,12 @@ border-radius: 23px;
 
 .price-controls {
   display: flex;
-   font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-
-}
+    margin-left: 15px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+} 
 
 .price-controls input {
   color: #ffffff;
@@ -1453,9 +1459,12 @@ border-radius: 23px;
 .min-price input,
 .max-price input {
   width: 29px;
-  margin-left: 2px;
+  background-color: transparent;
 }
 
+.min-price {
+  margin-right: 2px; 
+}
 .range-controls {
   position: relative;
   padding: 16px 21px;
@@ -1499,9 +1508,6 @@ border-radius: 23px;
   left: 132px;
 }
 
-.form-filters select {
-  border: none;
-}
 
 .filter-item-fatness {
  width: 415px;
@@ -1756,6 +1762,26 @@ border-radius: 23px;
 
 }
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+      z-index: 40;
+}
+
+
+.modal-show {
+  display: block;
+}
+
+.overlay-show {
+  display: block;
+}
+
 .form-feedback {
   display: flex;
   flex-direction: column;
@@ -1810,6 +1836,7 @@ border-radius: 23px;
     right: 14px;
   border: none; 
   background-color: transparent;
+  cursor: pointer;
 }
 
 .modal-close::before,
@@ -1832,13 +1859,3 @@ background-color: #231f20;
 }
 
 
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-      z-index: 40;
-}

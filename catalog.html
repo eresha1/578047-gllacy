@@ -9,7 +9,9 @@
 </head>
 <body>
   <div class="page-wrapper"> 
-    <header class="main-header container">
+    <div class="container">
+
+    <header class="main-header">
     <nav class="main-navigation">
       <a class="main-logo" href="index.html">
        <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
@@ -41,7 +43,7 @@
           </a>
           <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search" >Поиск по сайту</label>
-            <input class="input-text" type="search" name="search" placeholder="Что ищем?"> 
+            <input class="input-text" type="search" name="search" id="search" placeholder="Что ищем?"> 
           </form>
         </div>
         <div class="user-wrapper login-wrapper">
@@ -121,7 +123,7 @@
       <a href="tel:88124502525" class="contact-number">8 812 450-25-25</a>
     </div>
   </header>
-  <main class="main-inner container">
+  <main class="main-inner">
     <ul class="breadcrumbs">
       <li><a class="link-all" href="index.html">Главная</a></li>
       <li><a class="link-all" href="#">Каталог</a></li>
@@ -140,22 +142,18 @@
   <option value="expensive">сначала дорогие</option>
   <option value="fat">по жирности</option>
 </select>
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
 <polyline fill="#ffffff" points="5.5,10 0,0 11,0 "/>
 </svg>
 </div>
 </fieldset>
 <fieldset class="filter-item filter-item-price">
-   <div class="price-controls">
-  <legend>Цена:</legend>
- 
-  <label class="min-price">
-    <input name="miprice-controlsn-price" type="text" value="100">руб. - 
-  </label>
-   <label class="max-price">
-    <input name="max-price" type="text" value=" 500">руб.
-  </label>
+  <div class="price-controls">
+  <label class="min-price">Цена:
+    <input name="min-price" type="text" value="100">руб.</label>
+       <label class="max-price">-
+    <input name="max-price" type="text" value="500">руб.</label>
   </div>
   <div class="range-controls  sort-wrapper">
     <div class="scale">
@@ -418,7 +416,7 @@
         </div>
 
     </main>
-     <footer class="main-footer container">
+     <footer class="main-footer">
     <ul class="social-list">
       <li class="social-item">
         <a href="#" class="social-link">
@@ -464,6 +462,7 @@
     </p>
   </div>
 </footer>
+</div>
 </div>
 
   </body>
