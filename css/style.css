@@ -544,7 +544,7 @@ img {
   position: absolute;
   max-width: 180px;
   top: 73px;
-  right: 27px;
+  right: 0;
 }
 
 .main-header-contact p {
