@@ -1348,7 +1348,7 @@ img {
   height: 4px;
   background-color: #ababab;
   border: 8px solid #ffffff;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .range-toggle-min {
@@ -1473,7 +1473,7 @@ img {
 .button-filters {
   margin-top: 5px;
   padding: 7px 27px;
-  border: 2px solid #ffffff
+  border: 2px solid #ffffff;
 }
 
 .button-filters:hover, .button-filters:focus {
@@ -1577,7 +1577,6 @@ img {
   z-index: 50;
   top: 50%;
   margin-top: -225px;
-  ;
   left: 50%;
   margin-left: -250px;
   width: 477px;
