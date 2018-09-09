@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div class="page-wrapper page-wrapper-bg1">
+<body> 
+  <input class="radio-slider" type="radio" id="product-1" name="toggle" checked>
+  <input class="radio-slider" type="radio" id="product-2" name="toggle">
+  <input class="radio-slider" type="radio" id="product-3" name="toggle">
+  <div class="page-wrapper">
   <header class="main-header container">
     <nav class="main-navigation">
       <a class="main-logo">
@@ -83,38 +86,29 @@
   </header>
   <main>
     <div class="container">
-    <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
-    <div class="slider">
-      <div class="slide slide-current">
-        <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-        <a class="button slide-button" href="#">Давайте оба!</a>
-      </div>
-      <div class="slide">
-        <h2>Шоколадный пломбир и лимонный сорбет</h2>
-        <a class="button slide-button" href="#">Давайте оба!</a>
-      </div>
-      <div class="slide">
-        <h2>Пломбир с помадкой и клубничный щербет</h2>
-        <a class="button slide-button" href="#">Давайте оба!</a>
-      </div>
-      <ul class="slider-controls">
-        <li><button class="toggle-slider toggle-slider-current" type="button">
-          <span class="visually-hidden">1</span>
-        </button>
-      </li>
-      <li>
-        <button class="toggle-slider" type="button">
-          <span class="visually-hidden">2</span>
-        </button>
-      </li>
-      <li>
-        <button class="toggle-slider" type="button">
-          <span class="visually-hidden">3</span>
-        </button>
-      </li>
-      </ul>
-    </div>
-    <section class="promotion">
+      <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
+      <section class="slider">
+        <h2 class="visually-hidden">Слайды</h2>
+        <div class="slider-controls">
+          <label class="toggle-slider" for="product-1">Первый</label>
+          <label class="toggle-slider" for="product-2">Второй</label>
+          <label class="toggle-slider" for="product-3">Третий</label>
+        </div>
+        <div class="slide slide1">
+          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide slide2">
+          <h2>Шоколадный пломбир и лимонный сорбет</h2>
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+        <div class="slide slide3">
+          <h2>Пломбир с помадкой и клубничный щербет</h2>
+          <a class="button slide-button" href="#">Давайте оба!</a>
+        </div>
+      </section>
+
+      <section class="promotion">
       <h2 class="visually-hidden">Акции магазина</h2>
       <ul class="promotion-list">
         <li class="promotion-item promotion-item-raspberry">
@@ -128,8 +122,8 @@
           <a class="button promotion-button" href="#">Хочу шоколадки! </a>
         </li>
       </ul>
-    </section>
-    <section class="offers">
+      </section>
+      <section class="offers">
       <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="card-list">
         <li class="card-item card-item-hit">
@@ -197,8 +191,8 @@
           </div>
         </li>
       </ul>
-    </section>
-    <section class="features">
+      </section>
+      <section class="features">
       <h2 class="visually-hidden">О магазине Глейси</h2>
       <p class="features-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
       <ul class="feature-list">
@@ -215,8 +209,8 @@
           Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
         </li>
       </ul>
-    </section>
-    <div class="news-wrapper">
+      </section>
+      <div class="news-wrapper">
       <article class="blog-article">
         <h2>Новое в нашем блоге</h2>
         <a class="blog-article-title" href="#">10 способов сервировки фруктовых щербетов к столу</a>
@@ -233,13 +227,13 @@
         </form>
       </div>
       </section>
-    </div>
+      </div>
     </div>
     <section class="location">
       <h2 class="visually-hidden">Как к нам добраться</h2>
       <div class="map-interactive" id="map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3923b210b90b025c55e2f2c862efaf6ef9873e1196d6e8073b8ce5e5ed40f755&amp;source=constructor" width="1349" height="430" ></iframe>
-    </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3923b210b90b025c55e2f2c862efaf6ef9873e1196d6e8073b8ce5e5ed40f755&amp;source=constructor" width="1349" height="430" ></iframe>
+      </div>
        <img class="map-image" src="img/map-full.png" width="1200" height="640" alt="Главный офис и офлайн магазин находятся по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург"> 
       <div class="location-contacts">
         <p> Адрес главного офиса и&nbsp;офлайн-магазина:

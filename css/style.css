@@ -81,28 +81,34 @@ img {
 
 .page-wrapper {
   background-color: #849d8f;
-}
-
-.page-wrapper-bg1 {
-  background-color: #849d8f;
   background-image: url(../img/ice-cream1.png);
   background-position: top center;
   background-repeat: no-repeat;
 }
 
-.page-wrapper-bg2 {
-  background-color: #8996a6;
-  background-image: url(../img/ice-cream2.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+.page-wrapper::before,
+.page-wrapper::after {
+  content: "";
+  visibility: hidden;
 }
 
-.page-wrapper-bg3 {
-  background-color: #9d8b84;
-  background-image: url(../img/ice-cream3.png);
-  background-position: top center;
-  background-repeat: no-repeat;
+.page-wrapper::before {
+  background-image: url("../img/ice-cream2.png");
+  background-color: #8996a6;
 }
+
+.page-wrapper::after {
+  background-image: url("../img/ice-cream3.png");
+  background-color: #9e8c85;
+}
+
+.page-wrapper-inner {
+  background-color: #849d8f;
+}
+
+.radio-slider {
+    display: none;
+  }
 
 .container {
   width: 1146px;
@@ -650,17 +656,14 @@ img {
 
 .slider {
   position: relative;
+   padding-top: 315px;
+   text-align: center; 
+   color: #ffffff;
+  margin-bottom: 41px; 
 }
 
 .slide {
-  display: none;
-  margin-top: 315px; 
-  margin-bottom: 41px;
-}
-
-.slide-current {
-  display: block;
-  text-align: center; 
+  display: none; 
 }
 
 .slide h2 {
@@ -688,26 +691,51 @@ img {
 
 .slider-controls {
   position: absolute; 
-    top: 170px;
+    bottom: 21px;
     left: 0;
-  display: flex;
-  flex-wrap: wrap;
+   display: flex;
+  flex-wrap: wrap; 
+  z-index: 20;
+  font-size: 0;
 }
 
-.toggle-slider {
-  display: block;
-  width: 21px;
-  height: 21px;
+.toggle-slider { 
+  width: 17px;
+  height: 17px;
   margin-right: 8px;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
-cursor: pointer;
+cursor: pointer; 
 }
 
-.toggle-slider-current {
-  background-color: #ffffff;
+
+#product-1:checked ~ .page-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/ice-cream1.png");
 }
+
+#product-2:checked ~ .page-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/ice-cream2.png");
+}
+
+#product-3:checked ~ .page-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/ice-cream3.png");
+}
+
+#product-1:checked ~ .page-wrapper .slide1,
+#product-2:checked ~ .page-wrapper .slide2,
+#product-3:checked ~ .page-wrapper .slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .page-wrapper label[for="product-1"],
+#product-2:checked ~ .page-wrapper label[for="product-2"],
+ #product-3:checked ~ .page-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}  
 
 .toggle-slider:not(.toggle-slider-current) {
   cursor: pointer;
