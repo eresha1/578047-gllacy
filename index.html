@@ -6,13 +6,13 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <input class="radio-slider" type="radio" id="product-1" name="toggle" checked>
-  <input class="radio-slider" type="radio" id="product-2" name="toggle">
-  <input class="radio-slider" type="radio" id="product-3" name="toggle">
+  <input class="radio-slider product-1" type="radio" id="product-1" name="toggle" checked>
+  <input class="radio-slider product-2" type="radio" id="product-2" name="toggle">
+  <input class="radio-slider product-3" type="radio" id="product-3" name="toggle">
   <div class="page-wrapper">
      <div class="container">
     <header class="main-header">
@@ -122,9 +122,9 @@
         <section class="slider">
           <h2 class="visually-hidden">Слайды</h2>
           <div class="slider-controls">
-            <label class="toggle-slider" for="product-1">Первый</label>
-            <label class="toggle-slider" for="product-2">Второй</label>
-            <label class="toggle-slider" for="product-3">Третий</label>
+            <label class="toggle-slider product-1" for="product-1">Первый</label>
+            <label class="toggle-slider product-2" for="product-2">Второй</label>
+            <label class="toggle-slider product-3" for="product-3">Третий</label>
           </div>
           <div class="slide slide1">
             <h2>Крем-брюле и пломбир с малиновым джемом</h2>
@@ -267,22 +267,24 @@
       </div>
       <section class="location">
         <h2 class="visually-hidden">Как к нам добраться</h2>
-        <div class="map-interactive" id="map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3923b210b90b025c55e2f2c862efaf6ef9873e1196d6e8073b8ce5e5ed40f755&amp;source=constructor"
-            width="1349" height="430"></iframe>
-        </div>
         <img class="map-image" src="img/map-full.png" width="1200" height="640" alt="Главный офис и офлайн магазин находятся по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <div class="location-contacts">
-          <p> Адрес главного офиса и&nbsp;офлайн-магазина:
-            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          </p>
-          <p>Для заказов по телефону:
-            <b>
-              <a href="tel:88124502525">8 812 450-25-25</a>
-            </b>
-            (с 10 до 20 ежедневно)
-          </p>
-          <a class="button button-feedback" href="#">Форма обратной связи</a>
+        <div class="map-interactive">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3923b210b90b025c55e2f2c862efaf6ef9873e1196d6e8073b8ce5e5ed40f755&amp;source=constructor"
+            width="1200" height="430"></iframe>
+        </div>        
+        <div class="location-contacts-wrapper">
+          <div class="location-contacts">
+            <p> Адрес главного офиса и&nbsp;офлайн-магазина:
+              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+            </p>
+            <p>Для заказов по телефону:
+              <b>
+                <a href="tel:88124502525">8 812 450-25-25</a>
+              </b>
+              (с 10 до 20 ежедневно)
+            </p>
+            <a class="button button-feedback" href="#">Форма обратной связи</a>
+          </div>
         </div>
       </section>
     </main>
