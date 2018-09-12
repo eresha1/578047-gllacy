@@ -106,6 +106,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding-top: 9px;
+  margin-bottom: 20px;
+
 }
 
 .main-navigation {
@@ -325,7 +327,8 @@ img {
 .input-text {
   display: block;
   width: 100%;
-  padding: 10px 15px;
+  min-height: 44px;
+  padding: 10px 15px 8px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
@@ -336,10 +339,7 @@ img {
 }
 
 .input-text:hover {
-  padding: 9px 14px;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 700;
+  padding: 9px 14px 7px;
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
@@ -399,6 +399,13 @@ img {
   color: #999999;
 }
 
+.input-text::-moz-placeholder  {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
 .input-text:-ms-input-placeholder {
   font-size: 14px;
   line-height: 24px;
@@ -406,12 +413,13 @@ img {
   color: #999999;
 }
 
-.input-text::-ms-input-placeholder {
+.input-text:-moz-placeholder {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #999999;
 }
+
 
 .input-text::placeholder {
   font-size: 14px;
@@ -565,7 +573,7 @@ img {
 
 .slider {
   position: relative;
-  padding-top: 315px;
+  padding-top: 295px;
   margin-bottom: 41px;
   text-align: center;
   color: #ffffff;
@@ -921,13 +929,17 @@ img {
 }
 
 .subscribe-container {
-  min-height: 87%;
-  padding: 13px 22px;
+  padding: 30px 22px 35px;
   color: #5a5a5a;
   line-height: 22px;
   font-weight: 400;
   background-color: #f8f7f4;
   border-radius: 15px;
+}
+
+.subscribe-container p {
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .form-subscribe {
@@ -939,8 +951,9 @@ img {
 .form-subscribe input {
   width: 367px;
   margin-right: 12px;
-  font-size: 16px;
+  font-size: 16px; 
 }
+
 
 .text-subscribe:hover {
   font-size: 16px;
@@ -950,11 +963,15 @@ img {
   font-size: 16px;
 }
 
-.text-subscribe:-ms-input-placeholder {
+.text-subscribe::-moz-placeholder {
   font-size: 16px;
 }
 
-.text-subscribe::-ms-input-placeholder {
+.text-subscribe:-ms-input-placeholder {
+  font-size: 16px; 
+}
+
+.text-subscribe:-moz-placeholder {
   font-size: 16px;
 }
 
@@ -1186,9 +1203,6 @@ img {
 
 /* страница каталога*/
 
-.main-inner {
-  padding-top: 20px;
-}
 
 .breadcrumbs {
   display: flex;
@@ -1359,6 +1373,10 @@ img {
   border: 8px solid #ffffff;
   border-radius: 50%;
 }
+.range-toggle:hover {
+  border: 9px solid #ffffff; 
+}
+
 
 .range-toggle-min {
   left: 34px;
@@ -1688,11 +1706,15 @@ img {
   font-size: 16px;
 }
 
+.input-text-feedback::-moz-placeholder {
+  font-size: 16px;
+}
+
 .input-text-feedback:-ms-input-placeholder {
   font-size: 16px;
 }
 
-.input-text-feedback::-ms-input-placeholder {
+.input-text-feedback:-moz-placeholder {
   font-size: 16px;
 }
 
